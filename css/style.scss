@@ -64,6 +64,7 @@ li {
     }
 
     &__search {
+        outline: none;
         padding: 9px 75px 12px 16px;
         background-color: rgba(255, 255, 255, 1);
         border: 1px solid rgba(230, 230, 230, 1);
@@ -71,6 +72,7 @@ li {
     }
 
     &__button {
+        outline: 0;
         padding: 9px 11px;
         font-family: 'FontAwesome';
         color: rgba(164, 164, 164, 1);
@@ -641,5 +643,103 @@ li {
             background-color: $colorSite;
             color: #f7f7f8;
         }
+    }
+}
+
+.crumb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 148px;
+    background-color: #f8f3f4;
+
+    &__head {
+        font-size: 24px;
+        font-weight: 900;
+        color: $colorSite;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    &__menu {
+        display: flex;
+        font-size: 14px;
+        font-weight: 300;
+        color: #636363;
+        text-align: center;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(99, 99, 99, 1);
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    &__link__style {
+        font-size: 14px;
+        font-weight: bold;
+        color: $colorSite;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+}
+
+.category {
+    margin-top: 59px;
+
+    &__details[open]>.category__summary::after {
+        content: '\25BE';
+        color: $colorSite;
+    }
+
+    &__details[open] .category__summary {
+        color: $colorSite;
+    }
+
+    &__summary {
+        cursor: pointer;
+        outline: 0;
+        color: rgba(111, 110, 110, 1);
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        border-left: 5px solid $colorSite;
+        padding-left: 11px;
+        width: 259px;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 10px;
+        padding-top: 7px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+    }
+
+    &__::-webkit-details-marker {
+        display: none;
+    }
+
+    &__summary::after {
+        content: '\25BE';
+        font-family: 'FontAwesome';
+        font-size: 20px;
+        color: rgba(111, 110, 110, 1);
+        line-height: 20px;
+    }
+
+    &__nav {
+        padding-left: 16px;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-family: 'Lato';
+        font-weight: 600;
+        color: rgba(111, 110, 110, 1);
+        line-height: 33px;
     }
 }
